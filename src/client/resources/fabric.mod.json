@@ -2,7 +2,7 @@
 
     "schemaVersion": 1,
     "id": "autosocial",
-    "version": "2.3.2",
+    "version": "2.3.3",
     "name": "AutoSocial",
     "description": "Haha funny ai robot on the minecrafts (totally tubular)",
     "authors": ["jbm11208"],
@@ -19,8 +19,8 @@
       ]
     },
     "depends": {
-      "fabricloader": ">=0.19.3",
-      "minecraft": ">=26.2",
+      "fabricloader": ">=0.19.5",
+      "minecraft": ">=26.3",
       "fabric-api": "*"
     },
 	"icon": "assets/autosocial/icon.png",

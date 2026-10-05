@@ -13,11 +13,7 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
-import org.lwjgl.glfw.GLFW;
 import com.jbm11208.autosocial.ui.AutoSocialConfigScreen;
-
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
 
 public class ClientKeybinds implements ClientModInitializer {
 
@@ -36,17 +32,17 @@ public class ClientKeybinds implements ClientModInitializer {
                 Identifier.fromNamespaceAndPath("autosocial", "category")
         );
         // Register keybinding for skipping current audio; appears in Controls -> Key Binds
-        skipKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.skip", InputConstants.Type.KEYSYM, InputConstants.KEY_PERIOD, CATEGORY));
+        skipKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.skip", InputConstants.Type.KEYBOARD, InputConstants.KEY_PERIOD, CATEGORY));
         // Register keybinding for reloading config
-        reloadConfigKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.reload_config", InputConstants.Type.KEYSYM, InputConstants.KEY_NUMPAD6, CATEGORY));
+        reloadConfigKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.reload_config", InputConstants.Type.KEYBOARD, InputConstants.KEY_NUMPAD6, CATEGORY));
         // Register keybinding for toggling the Now Playing HUD
-        toggleVideoHudKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.toggle_video_hud", InputConstants.Type.KEYSYM, InputConstants.KEY_NUMPAD8, CATEGORY));
+        toggleVideoHudKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.toggle_video_hud", InputConstants.Type.KEYBOARD, InputConstants.KEY_NUMPAD8, CATEGORY));
         // Register keybinding for opening the AutoSocial config GUI
-        openConfigKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.open_config", InputConstants.Type.KEYSYM, InputConstants.KEY_NUMPAD5, CATEGORY));
+        openConfigKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.open_config", InputConstants.Type.KEYBOARD, InputConstants.KEY_NUMPAD5, CATEGORY));
         // Register keybinding for taking a screenshot
-        screenshotKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.screenshot", InputConstants.Type.KEYSYM, InputConstants.KEY_NUMPAD9, CATEGORY));
+        screenshotKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.screenshot", InputConstants.Type.KEYBOARD, InputConstants.KEY_NUMPAD9, CATEGORY));
         // Register keybinding for taking a screenshot and adding a custom user prompt
-        customScreenshotKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.custom_screenshot", InputConstants.Type.KEYSYM, InputConstants.KEY_NUMPAD7, CATEGORY));
+        customScreenshotKey = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.autosocial.custom_screenshot", InputConstants.Type.KEYBOARD, InputConstants.KEY_NUMPAD7, CATEGORY));
 
         // Create HUD element for showing current playing YouTube title
         Identifier hudId = Identifier.fromNamespaceAndPath("assets.autosocial", "now_playing_hud");
